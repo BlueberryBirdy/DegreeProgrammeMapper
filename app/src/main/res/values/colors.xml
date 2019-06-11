@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFDD00</color>
+    <color name="colorPrimaryDark">#FFDD00</color>
+    <color name="colorAccent">#D81B60</color>
+    <!-- Wintec colours -->
+    <!-- Yellow used for background and feature buttons -->
+    <color name="wintecYellow">#FFDD00</color>
+    <!-- Black used for text -->
+    <color name="wintecBlack">#231F20</color>
+    <!-- Dark Grey used for text -->
+    <color name="wintecDarkGrey">#373A3C</color>
+    <!-- Light Grey used for panels -->
+    <color name="wintecLightGrey">#F0F0F0</color>
+    <!-- Colours used for streams -->
+    <color name="networkBackground">#FDE1FF</color>
+    <color name="networkBackgroundDark">#e3c9e5</color>
+
+    <color name="softwareBackground">#E1EAFF</color>
+    <color name="softwareBackgroundDark">#C9D2E5</color>
+    <color name="softwareForeground">#C5D6FF</color>
+    <color name="softwareForegroundDark">#E1EAFF</color>
+
+    <color name="databaseBackground">#CCFFCC</color>
+    <color name="databaseBackgroundDark">#b7e5b7</color>
+
+    <color name="multimediaBackground">#FFE1E1</color>
+    <color name="multimediaBackgroundDark">#e5c9c9</color>
+
+
+    <color name="colorBackground">#FFFFFF</color>
+</resources>

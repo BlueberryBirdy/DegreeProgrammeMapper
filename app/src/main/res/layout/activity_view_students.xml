@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/layout_ViewStudents_Authenticate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".5"
+            android:visibility="visible"
+            app:srcCompat="@color/wintecDarkGrey"
+            tools:ignore="ContentDescription" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:paddingTop="16dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/label_ViewStudents_PasswordPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginBottom="8dp"
+                android:labelFor="@id/field_ViewStudents_Password"
+                android:text="@string/prompt_password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintBottom_toTopOf="@+id/field_ViewStudents_Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/field_ViewStudents_Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintBottom_toTopOf="@id/layout_ViewStudents_AuthenticateButtons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:targetApi="o" />
+
+            <LinearLayout
+                android:id="@+id/layout_ViewStudents_AuthenticateButtons"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|fill_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/button_ViewStudents_AuthenticateCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@android:string/cancel" />
+
+                <Button
+                    android:id="@+id/button_ViewStudents_AuthenticateAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/verify" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_ViewStudents_disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/wintecLightGrey"
+        android:clickable="true"
+        android:elevation="3dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".DisclaimerActivity"
+        tools:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginRight="64dp"
+            android:layout_marginBottom="64dp"
+            android:text="@string/disclaimer"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/wintecDarkGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:titleMarginEnd="0dp"/>
+
+            <include
+                layout="@layout/header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_ViewStudents_Students"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ViewStudentsActivity">
+
+            <TextView
+                android:id="@+id/label_ViewStudents_Prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/select_student_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_ViewStudents_Filter"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/wintecLightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_ViewStudents_Prompt">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layout_ViewStudents_Filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="1dp">
+
+                    <TextView
+                        android:id="@+id/label_ViewStudents_Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/filterPrompt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_ViewStudents_NamePrompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/student_name_prompt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_ViewStudents_Filter" />
+
+                    <EditText
+                        android:id="@+id/field_ViewStudents_Name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:autofillHints=""
+                        android:ems="10"
+                        android:hint="@string/student_name"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/label_ViewStudents_NamePrompt"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline_ViewStudents_Filter"
+                        app:layout_constraintStart_toEndOf="@+id/label_ViewStudents_NamePrompt"
+                        app:layout_constraintTop_toTopOf="@+id/label_ViewStudents_NamePrompt"
+                        tools:targetApi="o" />
+
+                    <TextView
+                        android:id="@+id/label_ViewStudents_IDPrompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/student_id_prompt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_ViewStudents_NamePrompt" />
+
+                    <EditText
+                        android:id="@+id/field_ViewStudents_ID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:autofillHints=""
+                        android:ems="10"
+                        android:hint="@string/student_id"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/label_ViewStudents_IDPrompt"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline_ViewStudents_Filter"
+                        app:layout_constraintStart_toEndOf="@+id/label_ViewStudents_IDPrompt"
+                        app:layout_constraintTop_toTopOf="@+id/label_ViewStudents_IDPrompt"
+                        tools:targetApi="o" />
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline_ViewStudents_Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintGuide_percent="0.50"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/label_ViewStudents_PathwayPrompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/pathway_prompt"
+                        app:layout_constraintBottom_toBottomOf="@+id/label_ViewStudents_NamePrompt"
+                        app:layout_constraintStart_toStartOf="@+id/guideline_ViewStudents_Filter"
+                        app:layout_constraintTop_toTopOf="@+id/label_ViewStudents_NamePrompt" />
+
+                    <Spinner
+                        android:id="@+id/spinner_ViewStudents_Pathway"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/label_ViewStudents_PathwayPrompt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/label_ViewStudents_PathwayPrompt"
+                        app:layout_constraintTop_toTopOf="@+id/label_ViewStudents_PathwayPrompt" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_ViewStudents_Students"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_ViewStudents_Filter"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_student"
+                tools:minHeight="100dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_ViewStudents_AddStudent"
+                android:layout_width="0dp"
+                android:layout_height="128dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="108dp"
+                app:cardBackgroundColor="@color/wintecLightGrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list_ViewStudents_Students">
+
+                <TextView
+                    android:id="@+id/label_ViewStudents_AddStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/add_new_student_prompt"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_ViewStudents"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorBackground"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/button_ViewStudents_About"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/wintecYellow"
+            android:text="@string/about" />
+
+        <Button
+            android:id="@+id/button_ViewStudents_Authenticate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/wintecYellow"
+            android:text="@string/edit_modules" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

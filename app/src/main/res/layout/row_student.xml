@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_StudentRow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/wintecLightGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_StudentRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_NamePrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/student_name_prompt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.33" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_IDPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/student_id_prompt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".66" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/label_StudentRow_NamePrompt"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_StudentRow"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/label_StudentRow_NamePrompt"
+                app:layout_constraintTop_toTopOf="@+id/label_StudentRow_NamePrompt"
+                tools:text="Joe Bloggs" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/label_StudentRow_IDPrompt"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_StudentRow"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/label_StudentRow_IDPrompt"
+                app:layout_constraintTop_toTopOf="@+id/label_StudentRow_IDPrompt"
+                tools:text="12345678" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_DegreePrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/degree_prompt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_StudentRow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".33" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_PathwayPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/pathway_prompt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_StudentRow"
+                app:layout_constraintTop_toBottomOf="@+id/label_StudentRow_DegreePrompt" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_Degree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/degree_bappit"
+                app:layout_constraintBottom_toBottomOf="@+id/label_StudentRow_DegreePrompt"
+                app:layout_constraintStart_toEndOf="@+id/label_StudentRow_DegreePrompt"
+                app:layout_constraintTop_toTopOf="@+id/label_StudentRow_DegreePrompt" />
+
+            <TextView
+                android:id="@+id/label_StudentRow_Pathway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/label_StudentRow_PathwayPrompt"
+                app:layout_constraintStart_toEndOf="@+id/label_StudentRow_PathwayPrompt"
+                app:layout_constraintTop_toTopOf="@+id/label_StudentRow_PathwayPrompt"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Software Engineering" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

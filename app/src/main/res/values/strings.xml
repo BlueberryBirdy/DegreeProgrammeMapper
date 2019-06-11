@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Degree Programme Mapper</string>
+    <string name="disclaimer">The DPM App is a Prototype version of a degree planner only and NOT an official study plan.\n It is intended that students shall use this to get an understanding of the pathways offered and then discuss study plans with a Wintec representative.\n Pathways may change accordingly making older versions redundant – Wintec takes no responsibility of outdated pathways or information displayed on the app.</string>
+    <!-- Header -->
+    <string name="headerText">Degree Programme Manager</string>
+    <string name="wintec_logo">Wintec Logo</string>
+    <!-- Select Student Page-->
+    <string name="select_student_title">Select Student</string>
+    <string name="filterPrompt">Filter:</string>
+    <string name="student_id_prompt">Student ID:</string>
+    <string name="student_id">Student ID</string>
+    <string name="student_name_prompt">Student Name:</string>
+    <string name="student_name">Student Name</string>
+    <string name="pathway_prompt">Pathway:</string>
+    <string name="degree_prompt">Degree:</string>
+    <string name="degree_bappit">BAppIT</string>
+    <string name="about">About</string>
+    <string name="edit_modules">Edit Modules</string>
+    <string name="add_new_student_prompt">Add New Student...</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+
+    <!-- Pathways -->
+    <string name="pathway_core">Core</string>
+    <string name="pathway_networking">Network Engineering</string>
+    <string name="pathway_software">Software Engineering</string>
+    <string name="pathway_database">Database Architecture</string>
+    <string name="pathway_multimedia">Multimedia and Web Development</string>
+    <string name="prompt_password">Enter Password:</string>
+    <string name="verify">Verify</string>
+    <string name="built_for_prompt">Built For:</string>
+    <string name="built_for">Blaine, Dileep and Ed (Wintec CBITE)</string>
+    <string name="app_version_prompt">App Version:</string>
+    <string name="dev_prompt">Developed By:</string>
+    <string name="dev">Ice Cube</string>
+    <string name="os_prompt">Operating System:</string>
+    <string name="year_1">Year 1 (Level 5):</string>
+    <string name="year_2">Year 2 (Level 6):</string>
+    <string name="year_3">Year 3 (Level 7):</string>
+    <string name="semester_1">Semester 1:</string>
+    <string name="semester_2">Semester 2:</string>
+    <string name="change_password">Change Password</string>
+    <string name="password_confirm_prompt">Confirm Password:</string>
+    <string name="export">Export</string>
+</resources>
